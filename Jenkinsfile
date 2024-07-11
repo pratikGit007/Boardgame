@@ -5,6 +5,12 @@ pipeline {
         maven 'maven3'
     }
     stages {
+
+        stage('Clean previous builds') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
         stage('Maven Build') {
             steps {
                 sh 'mvn compile'
