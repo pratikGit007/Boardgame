@@ -4,8 +4,6 @@ pipeline {
     tools{
         maven 'maven3'
     }
-
-    
     stages {
 
         stage('Clean previous builds') {
